@@ -122,7 +122,7 @@ What can you infer from these plots? Don't just explain what's in the graph, but
 
 We will look at a subset sample of movies, taken from the [Kaggle IMDB 5000 movie dataset](https://www.kaggle.com/carolzhangdc/imdb-5000-movie-dataset)
 
-```{r,load_movies, warning=FALSE, message=FALSE, eval=FALSE}
+```{r,load_movies, warning=FALSE, message=FALSE}
 
 movies <- read_csv(here::here("data", "movies.csv"))
 glimpse(movies)
