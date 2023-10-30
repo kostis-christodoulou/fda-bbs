@@ -264,35 +264,6 @@ formula_ci
 > the interpretation of the result. One paragraph max, please!
 
 
-# Biden's Approval Margins
-
-As we saw in class, fivethirtyeight.com has detailed data on [all polls
-that track the president's
-approval](https://projects.fivethirtyeight.com/biden-approval-ratings)
-
-```{r, cache=TRUE}
-# Import approval polls data directly off fivethirtyeight website
-approval_polllist <- read_csv('https://projects.fivethirtyeight.com/biden-approval-data/approval_polllist.csv') 
-
-glimpse(approval_polllist)
-
-# Use `lubridate` to fix dates, as they are given as characters.
-```
-
-## Create a plot
-
-What I would like you to do is to calculate the average net approval
-rate (approve- disapprove) for each week since he got into office. I
-want you plot the net approval for each week in 2022, along with its 95%
-confidence interval. There are various dates given for each poll, please
-use `enddate`, i.e., the date the poll ended. Your plot should look
-something like this:
-
-```{r trump_margins, echo=FALSE, out.width="100%"}
-knitr::include_graphics(here::here("images", "biden_approval_margin.png"), error = FALSE)
-```
-
-
 # Youth Risk Behavior Surveillance
 
 Every two years, the Centers for Disease Control and Prevention conduct the [Youth Risk Behavior Surveillance System (YRBSS)](https://www.cdc.gov/healthyyouth/data/yrbs/index.htm) survey, where it takes data from high schoolers (9th through 12th grade), to analyze health patterns. You will work with a selected group of variables from a random sample of observations during one of the years the YRBSS was conducted.
