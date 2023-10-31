@@ -15,11 +15,13 @@ editor_options:
     wrap: 72
 ---
 
-Let's take a look at the voting history of countries in the ***United
-Nations General Assembly***. We will be using data from the **unvotes**
-package. Additionally, we will make use of the **tidyverse** and
-**lubridate** packages for the analysis, and the **DT** package for
+Let's take a look at the voting ***history*** of countries in the
+***United Nations General Assembly***. We will be using data from the
+**unvotes** package. Additionally, we will make use of the **tidyverse**
+and **lubridate** packages for the analysis, and the **DT** package for
 interactive display of tabular output.
+
+
 
 ```{r load-packages, include=FALSE}
 list.of.packages <- c("unvotes", "tidyverse","lubridate", "DT") #check if packages are installed
@@ -71,7 +73,7 @@ few countries of interest first,
 
 ```{r country-list}
 country_list <- c("Greece", "China", 
-                  "United Kingdom", "India")
+                  "Italy", "India")
 ```
 
 and focus our analysis on them.
@@ -106,7 +108,7 @@ Italy.
 
 ```{r plot-yearly-yes-issue, fig.width=10, warning=FALSE, message=FALSE}
 un_votes %>%
-  filter(country %in% c("United States", "Italy")) %>%
+  filter(country %in% c("United States", "Italy", "United Kingdom")) %>%
   inner_join(un_roll_calls, by = "rcid") %>%
   inner_join(un_roll_call_issues, by = "rcid") %>%
   group_by(country, year = year(date), issue) %>%
