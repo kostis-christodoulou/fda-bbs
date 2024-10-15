@@ -58,7 +58,7 @@ extract_latest_date <- function(date_string) {
 
 
 # manipulate- tidy data
-us_election_polls <- polls[[6]] %>%  # the relevant table on the wikipedia page contains the list of all opinions polls
+us_election_polls <- polls[[5]] %>%  # the relevant table on the wikipedia page contains the list of all opinions polls
   filter(poll_source != "") %>%
   mutate(
     # convert characters to numbers
@@ -174,3 +174,4 @@ rolling_mean %>%
   theme(plot.title.position = "plot")+
   theme(text=element_text(size=12, family="Lato"))+
   NULL
+
