@@ -129,7 +129,7 @@ chronologically.
 > document, you must delete `eval=FALSE`, **not just here but in all
 > chunks were `eval=FALSE` appears.**
 
-```{r scatter_plot, eval=FALSE}
+```{r scatter_plot}
 
 tidyweather <- tidyweather %>%
   mutate(date = ymd(paste(as.character(Year), Month, "1")),
