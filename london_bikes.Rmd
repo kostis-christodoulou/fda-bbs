@@ -60,9 +60,12 @@ We will be talking more about data wrangling later, but for now just execute the
 bike <- bike %>%   
   mutate(
     year=year(date),
+    early_years = ifelse(year<=2012, TRUE, FALSE),  
     month = month(date),
     month_name=month(date, label = TRUE),
-    day_of_week = wday(date, label = TRUE)) 
+    day_of_week = wday(date, label = TRUE))  
+  
+  
 
 # generate new variable season_name to turn seasons from numbers to Winter, Spring, etc
 bike <- bike %>%  
