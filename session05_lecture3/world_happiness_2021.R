@@ -32,7 +32,7 @@ world_happiness_19 <- world_happiness %>%
   filter(year==2019) 
 
 world_happiness_19 %>% 
-  select(-c(country_name,year)) %>% 
+  select(-c(country_name,year, positive_affect, negative_affect)) %>% 
   ggpairs(alpha = 0.3)
 
 
